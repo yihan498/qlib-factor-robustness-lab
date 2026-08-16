@@ -1,8 +1,8 @@
 # Qlib Factor Robustness Lab
 
-> 一套面向量化研究工程与模型风险治理的可审计验证系统：复现上游基线，控制标签可得时间，冻结样本外实验，并以真实交易约束和机器 Gate 决定研究是否进入下一阶段。
+> 一套独立构建的量化研究验证与模型风险治理系统：以 Qlib 作为标准化数据、特征和执行基础设施，核心实现覆盖标签时序控制、因子稳定性建模、冻结样本外评估与机器研究 Gate。
 
-[在线研究备忘录](https://yihan498.github.io/qlib-factor-robustness-lab/) · [5 页打印报告](output/pdf/quant-research-note-v4.pdf) · [机器结果](evidence/v2_verified_results.json) · [独立 Grill 审计](reports/v4/grill-audit.md) · [v4 生成清单](evidence/v4_showcase_manifest.json)
+[在线研究备忘录](https://yihan498.github.io/qlib-factor-robustness-lab/) · [5 页打印报告](output/pdf/quant-research-note-v4.pdf) · [机器结果](evidence/v2_verified_results.json) · [独立 Grill 审计](reports/v4/grill-audit.md) · [v5 生成清单](evidence/v5_showcase_manifest.json)
 
 ![Research design](docs/assets/v4_research_design.png)
 
@@ -12,14 +12,14 @@
 
 | 证据链 | 目的 | 核心结果 | 可得结论 |
 |---|---|---:|---|
-| 上游工作流复现 | 验证 Alpha158、LightGBM 与 Qlib 执行环境 | Rank IC 0.04963；成本后年化超额 9.56% | 指定环境与上游基线可运行 |
-| 稳定性加权扩展评估 | 验证时间治理、参数选择、组合执行和研究 Gate | Rank IC 0.01221；成本后年化超额 -17.50% | 未达到研究晋级标准 |
+| 项目研究主线：稳定性加权评估 | 验证时间治理、参数选择、组合执行和研究 Gate | Rank IC 0.01221；成本后年化超额 -17.50% | 未达到研究晋级标准 |
+| 基础设施标定：标准参考工作流 | 确认 Alpha158、LightGBM 与 Qlib 执行环境 | Rank IC 0.04963；成本后年化超额 9.56% | 运行环境通过标定 |
 
-两条证据链不能被解释为同一策略的“改进前后”。官方 LightGBM 结果只承担环境复现基准，扩展实验必须由自身的对照和冻结测试结果接受评价。
+Qlib 是项目采用的研究基础设施，不是被修改后重新包装的作品；项目未改动 Qlib 上游源码。标准参考工作流只承担环境标定作用，项目研究主线必须由自身的两个对照和冻结测试结果接受评价，两者不能被解释为同一策略的“改进前后”。
 
 **最终状态：研究晋级 Gate = BLOCK，8 项检查中 3 项通过。**
 
-扩展信号虽然具有正截面相关性，但成本后收益、信息比率、最大回撤及相对对照优势均不满足预设条件，因此系统拒绝将其称为策略改进。项目的核心输出是可审计的研究决策，而不是收益承诺。
+稳定性信号虽然具有正截面相关性，但成本后收益、信息比率、最大回撤及相对对照优势均不满足预设条件，因此系统拒绝将其称为策略改进。项目的核心输出是可审计的研究决策，而不是收益承诺。
 
 ## 1. System scope
 
@@ -79,13 +79,13 @@ max\left(|\mu_{j,t}|-\lambda\frac{\sigma_{j,t}}{\sqrt{n_{j,t}}},0\right)
 | 涨跌停阈值 | 9.5% |
 | 最低费用 | 5 元 |
 
-Qlib 的 TopkDropoutStrategy 与 SimulatorExecutor 统一处理持仓变更、不可交易状态、换手和成本。扩展实验不再使用简化名单换手模型作为正式证据。
+Qlib 的 TopkDropoutStrategy 与 SimulatorExecutor 统一处理持仓变更、不可交易状态、换手和成本。项目正式实验不使用简化名单换手模型作为证据。
 
 ## 5. Out-of-sample evidence
 
 ![Execution diagnostics](docs/assets/v4_oos_evidence.png)
 
-| 扩展方案 | Rank IC | ICIR | 成本前超额 | 成本后超额 | 成本后 IR | 最大回撤 | 平均换手 |
+| 项目研究方案 | Rank IC | ICIR | 成本前超额 | 成本后超额 | 成本后 IR | 最大回撤 | 平均换手 |
 |---|---:|---:|---:|---:|---:|---:|---:|
 | 静态方向等权 | 0.02251 | 1.881 | -7.06% | -11.59% | -1.056 | -43.69% | 0.180 |
 | 60 日 Rolling-IC | 0.00849 | 0.736 | -10.82% | -15.52% | -1.575 | -55.65% | 0.187 |

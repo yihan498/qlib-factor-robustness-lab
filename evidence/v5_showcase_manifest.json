@@ -1,0 +1,11 @@
+{
+  "showcase_version": "v5",
+  "format": "institutional research note",
+  "narrative": "ownership-first; Qlib identified as infrastructure",
+  "gate_decision": "BLOCK",
+  "outputs": [
+    "docs/index.html",
+    "docs/v5/index.html"
+  ],
+  "historical_version_preserved": "docs/v4/index.html"
+}

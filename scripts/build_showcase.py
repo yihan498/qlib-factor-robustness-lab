@@ -373,5 +373,7 @@ def main() -> None:
 
 if __name__ == "__main__":
     from build_showcase_v4 import main as build_current
+    from reframe_showcase_v5 import main as reframe_current
 
     build_current()
+    reframe_current()
