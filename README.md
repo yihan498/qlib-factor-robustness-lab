@@ -2,7 +2,7 @@
 
 > 一套面向量化研究工程与模型风险治理的可审计验证系统：复现上游基线，控制标签可得时间，冻结样本外实验，并以真实交易约束和机器 Gate 决定研究是否进入下一阶段。
 
-[浏览器研究备忘录](docs/index.html) · [5 页打印报告](output/pdf/quant-research-note-v4.pdf) · [机器结果](evidence/v2_verified_results.json) · [独立 Grill 审计](reports/v4/grill-audit.md) · [v4 生成清单](evidence/v4_showcase_manifest.json)
+[在线研究备忘录](https://yihan498.github.io/qlib-factor-robustness-lab/) · [5 页打印报告](output/pdf/quant-research-note-v4.pdf) · [机器结果](evidence/v2_verified_results.json) · [独立 Grill 审计](reports/v4/grill-audit.md) · [v4 生成清单](evidence/v4_showcase_manifest.json)
 
 ![Research design](docs/assets/v4_research_design.png)
 
