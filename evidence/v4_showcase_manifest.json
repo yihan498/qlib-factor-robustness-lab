@@ -1,0 +1,14 @@
+{
+  "showcase_version": "v4",
+  "format": "institutional research note",
+  "gate_decision": "BLOCK",
+  "outputs": [
+    "docs/index.html",
+    "docs/v4/index.html",
+    "docs/quant-research-note-v4.pdf",
+    "docs/assets/v4_research_design.png",
+    "docs/assets/v4_temporal_control.png",
+    "docs/assets/v4_validation_matrix.png",
+    "docs/assets/v4_oos_evidence.png"
+  ]
+}

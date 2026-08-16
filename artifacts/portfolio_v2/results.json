@@ -1,0 +1,267 @@
+{
+  "status": "valid_v2",
+  "runtime": {
+    "python": "3.12.13",
+    "pyqlib": "0.9.7",
+    "lightgbm": "4.7.0",
+    "config_sha256": "96caea830e6e45f6b97f428747d2b5a5d3b6674faa6d4e80a8f92e3807013084"
+  },
+  "data_manifest": {
+    "source": "Qlib-packaged downloader using the community SunsetWolf/qlib_dataset release; underlying example prices are described as Yahoo Finance data",
+    "universe": "csi300",
+    "feature_rows": 479497,
+    "instruments": 546,
+    "first_date": "2014-01-02",
+    "last_date": "2020-07-31"
+  },
+  "temporal_controls": {
+    "label": "Ref($close, -2)/Ref($close, -1)-1 (T+1 to T+2 return)",
+    "information_lag_trading_sessions": 2,
+    "train_requested_end": "2015-12-31",
+    "train_effective_ic_cutoff": "2015-12-30",
+    "validation_requested_end": "2016-12-31",
+    "validation_effective_ic_cutoff": "2016-12-29",
+    "test_period": [
+      "2017-01-01",
+      "2020-08-01"
+    ]
+  },
+  "selected_factors": [
+    "MIN5",
+    "RANK5",
+    "MA5",
+    "RANK10",
+    "RSV5",
+    "BETA5",
+    "MA60",
+    "ROC5",
+    "QTLD5",
+    "QTLU5",
+    "ROC30",
+    "MIN10",
+    "MA10",
+    "QTLD60",
+    "LOW0",
+    "SUMN5",
+    "SUMD5",
+    "SUMP5",
+    "QTLU10",
+    "QTLD10",
+    "MA30",
+    "MIN60",
+    "CNTD5",
+    "QTLU20",
+    "MA20",
+    "MIN30",
+    "RSV10",
+    "QTLU60",
+    "RANK60",
+    "IMXD5"
+  ],
+  "validation_candidates": [
+    {
+      "window": 60,
+      "uncertainty_penalty": 0.5,
+      "shrinkage_to_dynamic": 0.25,
+      "rank_ic_mean": 0.05503019680284518,
+      "rank_icir_annualized": 4.684884657717003,
+      "trading_days": 243
+    },
+    {
+      "window": 60,
+      "uncertainty_penalty": 0.5,
+      "shrinkage_to_dynamic": 0.5,
+      "rank_ic_mean": 0.05496893104401958,
+      "rank_icir_annualized": 4.701239673342885,
+      "trading_days": 243
+    },
+    {
+      "window": 60,
+      "uncertainty_penalty": 0.5,
+      "shrinkage_to_dynamic": 0.75,
+      "rank_ic_mean": 0.05473204860055624,
+      "rank_icir_annualized": 4.703502490820515,
+      "trading_days": 243
+    },
+    {
+      "window": 60,
+      "uncertainty_penalty": 1.0,
+      "shrinkage_to_dynamic": 0.25,
+      "rank_ic_mean": 0.054993798878167105,
+      "rank_icir_annualized": 4.707955856231684,
+      "trading_days": 243
+    },
+    {
+      "window": 60,
+      "uncertainty_penalty": 1.0,
+      "shrinkage_to_dynamic": 0.5,
+      "rank_ic_mean": 0.05472657728814033,
+      "rank_icir_annualized": 4.732840699884176,
+      "trading_days": 243
+    },
+    {
+      "window": 60,
+      "uncertainty_penalty": 1.0,
+      "shrinkage_to_dynamic": 0.75,
+      "rank_ic_mean": 0.05431860074789112,
+      "rank_icir_annualized": 4.753600126977212,
+      "trading_days": 243
+    },
+    {
+      "window": 120,
+      "uncertainty_penalty": 0.5,
+      "shrinkage_to_dynamic": 0.25,
+      "rank_ic_mean": 0.05540322740937177,
+      "rank_icir_annualized": 4.687929091637131,
+      "trading_days": 243
+    },
+    {
+      "window": 120,
+      "uncertainty_penalty": 0.5,
+      "shrinkage_to_dynamic": 0.5,
+      "rank_ic_mean": 0.05577960192899106,
+      "rank_icir_annualized": 4.711367276384505,
+      "trading_days": 243
+    },
+    {
+      "window": 120,
+      "uncertainty_penalty": 0.5,
+      "shrinkage_to_dynamic": 0.75,
+      "rank_ic_mean": 0.05615786891419596,
+      "rank_icir_annualized": 4.734632162859055,
+      "trading_days": 243
+    },
+    {
+      "window": 120,
+      "uncertainty_penalty": 1.0,
+      "shrinkage_to_dynamic": 0.25,
+      "rank_ic_mean": 0.05539442339768932,
+      "rank_icir_annualized": 4.688763524054388,
+      "trading_days": 243
+    },
+    {
+      "window": 120,
+      "uncertainty_penalty": 1.0,
+      "shrinkage_to_dynamic": 0.5,
+      "rank_ic_mean": 0.05585844762790906,
+      "rank_icir_annualized": 4.720774515927465,
+      "trading_days": 243
+    },
+    {
+      "window": 120,
+      "uncertainty_penalty": 1.0,
+      "shrinkage_to_dynamic": 0.75,
+      "rank_ic_mean": 0.0561618841446384,
+      "rank_icir_annualized": 4.7396363252701725,
+      "trading_days": 243
+    }
+  ],
+  "selected_adaptive_parameters": {
+    "window": 60,
+    "uncertainty_penalty": 1.0,
+    "shrinkage_to_dynamic": 0.75,
+    "rank_ic_mean": 0.05431860074789112,
+    "rank_icir_annualized": 4.753600126977212,
+    "trading_days": 243
+  },
+  "test_results": {
+    "fixed_equal_signed": {
+      "signal": {
+        "rank_ic_mean": 0.022509979645944818,
+        "rank_icir_annualized": 1.8805139926980672,
+        "trading_days": 868
+      },
+      "portfolio": {
+        "annualized_excess_return_before_cost": -0.07058965023168888,
+        "annualized_excess_return_after_cost": -0.11587148885929624,
+        "information_ratio_after_cost": -1.0558941722042543,
+        "max_drawdown_after_cost": -0.4368621750931309,
+        "average_turnover": 0.18017796692645935,
+        "average_daily_cost": 0.0001796898358238387,
+        "backtest_days": 871
+      }
+    },
+    "rolling_ic_60": {
+      "signal": {
+        "rank_ic_mean": 0.008494255832696487,
+        "rank_icir_annualized": 0.7361162452368505,
+        "trading_days": 868
+      },
+      "portfolio": {
+        "annualized_excess_return_before_cost": -0.10823734327582096,
+        "annualized_excess_return_after_cost": -0.15516371176304483,
+        "information_ratio_after_cost": -1.5751429732141875,
+        "max_drawdown_after_cost": -0.5565052895392378,
+        "average_turnover": 0.18670121266348147,
+        "average_daily_cost": 0.00018621574796517414,
+        "backtest_days": 871
+      }
+    },
+    "adaptive_shrinkage": {
+      "signal": {
+        "rank_ic_mean": 0.012213145105200569,
+        "rank_icir_annualized": 1.0927596398250887,
+        "trading_days": 868
+      },
+      "portfolio": {
+        "annualized_excess_return_before_cost": -0.1274675992342261,
+        "annualized_excess_return_after_cost": -0.1750221863162969,
+        "information_ratio_after_cost": -1.7377323261621045,
+        "max_drawdown_after_cost": -0.6243838333882249,
+        "average_turnover": 0.1891899183757451,
+        "average_daily_cost": 0.00018870867889710633,
+        "backtest_days": 871
+      }
+    }
+  },
+  "research_promotion_gate": {
+    "gate": "research_promotion_v1",
+    "scope": "Promotion to a higher-fidelity research stage; not production approval",
+    "decision": "BLOCK",
+    "passed_checks": 3,
+    "total_checks": 8,
+    "checks": {
+      "test_days": {
+        "observed": 868,
+        "threshold": 500,
+        "passed": true
+      },
+      "rank_ic": {
+        "observed": 0.012213145105200569,
+        "threshold": 0.0,
+        "passed": true
+      },
+      "rank_icir": {
+        "observed": 1.0927596398250887,
+        "threshold": 0.5,
+        "passed": true
+      },
+      "after_cost_annualized_excess": {
+        "observed": -0.1750221863162969,
+        "threshold": 0.0,
+        "passed": false
+      },
+      "after_cost_information_ratio": {
+        "observed": -1.7377323261621045,
+        "threshold": 0.0,
+        "passed": false
+      },
+      "max_drawdown": {
+        "observed": -0.6243838333882249,
+        "threshold": -0.3,
+        "passed": false
+      },
+      "return_advantage_vs_best_control": {
+        "observed": -0.05915069745700066,
+        "threshold": 0.0,
+        "passed": false
+      },
+      "ir_advantage_vs_best_control": {
+        "observed": -0.6818381539578502,
+        "threshold": 0.0,
+        "passed": false
+      }
+    }
+  },
+  "interpretation_rule": "The adaptive method is called an improvement only if it beats both practical baselines on after-cost Qlib backtest metrics; otherwise it remains an engineering experiment."
+}

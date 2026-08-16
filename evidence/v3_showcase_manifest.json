@@ -1,0 +1,15 @@
+{
+  "showcase_version": "v3",
+  "methodology_result": "artifacts/portfolio_v2/results.json",
+  "methodology_sha256": "f4e044f6cf42fd877bb53d606a80583b4c79ed65ff46535c5e9b54ac3375463b",
+  "gate_decision": "BLOCK",
+  "generated_outputs": [
+    "docs/index.html",
+    "docs/v3/index.html",
+    "docs/assets/v3_architecture.png",
+    "docs/assets/v3_temporal_protocol.png",
+    "docs/assets/v3_validation_surface.png",
+    "docs/assets/v3_execution_diagnostics.png",
+    "output/pdf/interview-brief-v3.pdf"
+  ]
+}

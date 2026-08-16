@@ -1,0 +1,23 @@
+{
+  "upstream": "microsoft/qlib",
+  "runtime_release_commit": "da920b7f954f48ab1bb64117c976710de198373e",
+  "workflow_reference_snapshot": "79633dd9506ea689e5400dea0197717b5b3d74b7",
+  "runtime": {"pyqlib": "0.9.7", "lightgbm": "4.7.0"},
+  "config": "configs/official_alpha158_lightgbm_local.yaml",
+  "run_id": "5b4e5f37e9e24bef910a36d10f0e35e9",
+  "exit_code": 0,
+  "signal": {
+    "IC": 0.04745450901971543,
+    "ICIR": 0.3965188710163857,
+    "Rank IC": 0.04963418198968678,
+    "Rank ICIR": 0.42303017301171414
+  },
+  "portfolio": {
+    "annualized_excess_return_without_cost": 0.14080140288645804,
+    "information_ratio_without_cost": 1.6410669786287018,
+    "annualized_excess_return_with_cost": 0.09559744750684264,
+    "information_ratio_with_cost": 1.1147633907172878,
+    "max_drawdown_with_cost": -0.09554672387707991
+  },
+  "data_warning": "Qlib states that its public example data is collected from Yahoo Finance and may have imperfect quality."
+}

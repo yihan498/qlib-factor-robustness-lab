@@ -1,0 +1,82 @@
+{
+  "design": {
+    "universe": "CSI300",
+    "factor_library": "Qlib Alpha158",
+    "factor_selection_period": [
+      "2014-01-01",
+      "2016-12-31"
+    ],
+    "out_of_sample_period": [
+      "2017-01-01",
+      "2020-08-01"
+    ],
+    "top_factors": 30,
+    "rolling_window": 60,
+    "minimum_history": 20,
+    "assumed_one_way_cost_bps": 10.0,
+    "leakage_control": "factor selection uses train only; dynamic weights shift IC by one trading day"
+  },
+  "selected_factors": [
+    "ROC5",
+    "MIN5",
+    "MA10",
+    "MA60",
+    "BETA5",
+    "MA5",
+    "RANK10",
+    "QTLD60",
+    "MIN10",
+    "MA30",
+    "QTLD10",
+    "RANK5",
+    "ROC30",
+    "LOW0",
+    "QTLD30",
+    "QTLD5",
+    "QTLU10",
+    "MA20",
+    "SUMN5",
+    "SUMD5",
+    "SUMP5",
+    "MIN30",
+    "MIN60",
+    "MIN20",
+    "RSV5",
+    "QTLD20",
+    "QTLU20",
+    "QTLU30",
+    "QTLU5",
+    "RANK20"
+  ],
+  "results": {
+    "fixed_equal_signed": {
+      "rank_ic_mean": 0.022730173804124523,
+      "rank_icir_annualized": 1.8867810305205779,
+      "long_short_return_annualized": -0.02459856867790222,
+      "cost_adjusted_long_short_annualized": -0.1122121078034091,
+      "top50_turnover_mean": 0.34807381776239904,
+      "observations": 868
+    },
+    "rolling_ic": {
+      "rank_ic_mean": 0.009152887980022704,
+      "rank_icir_annualized": 0.7846567837130429,
+      "long_short_return_annualized": -0.13185544312000275,
+      "cost_adjusted_long_short_annualized": -0.22766188937404577,
+      "top50_turnover_mean": 0.3806228373702422,
+      "observations": 868
+    },
+    "stability_adjusted_ic": {
+      "rank_ic_mean": 0.01188215667601192,
+      "rank_icir_annualized": 1.0467700456684887,
+      "long_short_return_annualized": -0.11719389259815216,
+      "cost_adjusted_long_short_annualized": -0.2263203461713392,
+      "top50_turnover_mean": 0.43354094579008073,
+      "observations": 804
+    }
+  },
+  "limitations": [
+    "Qlib example data is sourced from Yahoo Finance and is not institutional-grade market data.",
+    "Long-short returns use the forward-return label and a simplified turnover cost diagnostic, not Qlib execution simulation.",
+    "This experiment tests one historical period and does not establish future profitability."
+  ]
+}

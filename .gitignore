@@ -1,0 +1,17 @@
+.venv/
+upstream/
+data/
+artifacts/mlflow.db
+artifacts/portfolio_v2/signal_*.csv
+tmp/
+mlruns/
+mlartifacts/
+.pytest_cache/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.coverage
+.playwright-cli/
+.mplconfig/
+memory/
+AGENTS.md
